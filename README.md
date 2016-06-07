@@ -17,5 +17,9 @@ For more information on how to use these functions see the following resources:
 
 ## Screenshots
 
-![WP Spatial Capabilities Check in action](./screenshots/wp_spatial_capabilities_check.png "WP Spatial Capabilities Check in action")
+WP Spatial Capabilities Check shows an easy to read table listing spatial functions and if they're available with your current database.
+![WP Spatial Capabilities Check in action](./screenshots/wp_spatial_capabilities_check.png "WP Spatial Capabilities Check in action.")
+
+The tool can be found in the Dashboard under Tools::Spatial Capabilities.
+![WP Spatial Capabilities menu location](./screenshots/menu_location.png "WP Spatial Capabilities menu location.")
 
