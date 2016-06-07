@@ -214,9 +214,9 @@ function wpscc_show_spatial_capabilites() {
 
 	foreach ( $all_funcs as $func ) {
 		$q = "SELECT $func() AS worked";
-		$wpdb->query( $q ); // @codingStandardsIgnoreLine
+		$wpdb->query( $q ); // @codingStandardsIgnoreLine -- PHPCS: We need to run these queries, regardless of the warnings.
 
-		$capabilites_table .= '<tr><th>' . $func . '</th>';
+		$capabilites_table .= '<tr><th>' . esc_html( $func ) . '</th>';
 		if ( strpos( $wpdb->last_error,'Incorrect parameter count' ) !== false || strpos( $wpdb->last_error,'You have an error in your SQL syntax' ) !== false ) {
 			$capabilites_table .= '<td class="hassupport">' . esc_html__( 'Yes','wp-spatial-capabilities-check' ) . '</td>';
 		} else {

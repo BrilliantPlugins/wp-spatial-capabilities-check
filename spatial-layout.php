@@ -98,7 +98,7 @@ esc_html_e( 'The following table was created by querying your current database c
 <?php
 
 if ( isset( $capabilites_table ) ) {
-	print esc_html( $capabilites_table );
+	print $capabilites_table; // @codingStandardsIgnoreLine -- PHPCS: This is a generated HTML table, ignore the error message here.
 } else {
 	print esc_html( '<p>' ) . esc_html__( 'The capabilities table could not be generated.','wp-spatial-capabilities-check' ) . esc_html( '</p>' );
 }
