@@ -1,24 +1,20 @@
 <?php
-/*
-Copyright (C) 2016 Cimbura.com
-
-This program is free software; you can redistribute it and/or
-modify it under the terms of the GNU General Public License
-as published by the Free Software Foundation; either version 2
-of the License, or (at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program; if not, write to the Free Software
-Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
- */
-
-
 /**
+ * Copyright (C) 2016 Cimbura.com
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  *
  * Plugin Name: WP Spatial Capabilities Check
  * Description: Check what spatial functions your version of MySQL or MariaDB has available.
@@ -29,14 +25,22 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  * Text Domain: wp_spatial_capabilities_check
  * Domain Path: /lang
  * License: GPLv2
+ *
+ * @package wp-spatial-capabilities-check
  */
 
 add_action( 'admin_menu', 'wpscc_admin_menu' );
 
+/**
+ * Add the management page menu listing.
+ */
 function wpscc_admin_menu() {
 	add_management_page( esc_html__( 'Spatial Capabilites', 'wp_spatial_capabilities_check' ), esc_html__( 'Spatial Capabilites','wp_spatial_capabilities_check' ), 'install_plugins', 'spatial-capabilites', 'wpscc_show_spatial_capabilites' );
 }
 
+/**
+ * Query the database and determine what spatial functions are available.
+ */
 function wpscc_show_spatial_capabilites() {
 	global $wpdb;
 
@@ -201,8 +205,8 @@ function wpscc_show_spatial_capabilites() {
 		'Y',
 	);
 
-	// Generate a table of capabilities
-	// Suppress errors during this test
+	// Generate a table of capabilities.
+	// Suppress errors during this test.
 	$suppress = $wpdb->suppress_errors( true );
 	$errors = $wpdb->show_errors( false );
 
@@ -227,13 +231,20 @@ function wpscc_show_spatial_capabilites() {
 	$wpdb->suppress_errors( $suppress );
 	$wpdb->show_errors( $errors );
 
-	// Generate a table of MySQL information
-	$version_info = $wpdb->get_row( 'SELECT VERSION() as v' );
+	// Generate a table of MySQL information.
+	$version_info = $wpdb->get_row( 'SELECT VERSION() as v' ); // @codingStandardsIgnoreLine
+	$version_info = $version_info->v;
 
 	include( dirname( __FILE__ ) . '/spatial-layout.php' );
 }
 
 add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'wpscc_add_plugin_action_links' );
+
+/**
+ * Add a link to the plugins listing page to let admins check their database from there.
+ *
+ * @param array $links The links to show under the plugin name on the plugin page.
+ */
 function wpscc_add_plugin_action_links( $links ) {
 	return array_merge(
 		array(
@@ -244,6 +255,10 @@ function wpscc_add_plugin_action_links( $links ) {
 }
 
 add_action( 'plugins_loaded', 'wpscc_load_textdomain' );
+
+/**
+ * Set up the I18N path.
+ */
 function wpscc_load_textdomain() {
 	load_plugin_textdomain( 'wp_spatial_capabilities_check', false, dirname( plugin_basename( __FILE__ ) ) . '/lang/' );
 }
