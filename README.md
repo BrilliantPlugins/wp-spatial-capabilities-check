@@ -17,5 +17,5 @@ For more information on how to use these functions see the following resources:
 
 ## Screenshots
 
-![WP Spatial Capabilities Check in action](/screeshots/wp_spatial_capabilities_check.png?raw=true "WP Spatial Capabilities Check in action")
+![WP Spatial Capabilities Check in action](./screenshots/wp_spatial_capabilities_check.png "WP Spatial Capabilities Check in action")
 
