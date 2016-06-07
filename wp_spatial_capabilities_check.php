@@ -1,5 +1,4 @@
 <?php
-
 /*
 Copyright (C) 2016 Cimbura.com
 
@@ -207,7 +206,7 @@ function wpscc_show_spatial_capabilites() {
 	$suppress = $wpdb->suppress_errors( true );
 	$errors = $wpdb->show_errors( false );
 
-	$capabilites_table = '<table class="spatialcapabilites"><tr><th>Function Name</th><th>Function Exists?</th></tr>';
+	$capabilites_table = '<table class="spatialcapabilites"><tr><th>' . esc_html__('Function Name','wp_spatial_capabilities_check') . '</th><th>' . esc_html__('Function Exists?','wp_spatial_capabilities_check') . '</th></tr>';
 
 	foreach ( $all_funcs as $func ) {
 		$q = "SELECT $func() AS worked";
@@ -215,9 +214,9 @@ function wpscc_show_spatial_capabilites() {
 
 		$capabilites_table .= '<tr><th>' . $func . '</th>';
 		if ( strpos( $wpdb->last_error,'Incorrect parameter count' ) !== false || strpos( $wpdb->last_error,'You have an error in your SQL syntax' ) !== false ) {
-			$capabilites_table .= '<td class="hassupport">Yes</td>';
+			$capabilites_table .= '<td class="hassupport">' . esc_html__('Yes','wp_spatial_capabilities_check') . '</td>';
 		} else {
-			$capabilites_table .= '<td class="lackssupport">No</td>';
+			$capabilites_table .= '<td class="lackssupport">' . esc_html__('No','wp_spatial_capabilities_check') . '</td>';
 		}
 		$capabilites_table .= '</tr>';
 	}
@@ -239,7 +238,7 @@ add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'wpscc_add_plu
 function wpscc_add_plugin_action_links( $links ) {
 	return array_merge(
 		array(
-			'Check Now' => '<a href="' . get_bloginfo( 'wpurl' ) . '/wp-admin/tools.php?page=spatial-capabilites">Check Now</a>'
+			'checknow' => '<a href="' . get_bloginfo( 'wpurl' ) . '/wp-admin/tools.php?page=spatial-capabilites">' . esc_html__('Check Now','wp_spatial_capabilities_check') . '</a>',
 		),
 		$links
 	);

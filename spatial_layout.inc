@@ -1,6 +1,5 @@
 <style type="text/css">
 
-
 .spatialcapabilites {
 	margin-top: 10px;
 	background-color: white;
@@ -53,40 +52,47 @@
 <div class="spatialcapabilites">
 <div class="leftblock">
 <p>
-WordPress runs on MySQL and MariaDB so it makes sense that the spatial capabilites available depend on what the underlying database provides.
+<?php esc_html_e('WordPress runs on MySQL and MariaDB so it makes sense that the spatial capabilites available depend on what the underlying database provides.','wp_spatial_capabilities_check'); ?>
 </p>
 <p>
-Initial spatial support arrived in MySQL 5.4.2, and is in all versions of MariaDB. Until MySQL 5.6.1 and MariaDB 5.3.3 most spatial operators worked on the bounding box instead of on the actual geometry. For details on why this was a huge limitation, see <a href='https://www.percona.com/blog/2013/10/21/using-the-new-mysql-spatial-functions-5-6-for-geo-enabled-applications/' target='_blank'>
-	this blog post from Percona.com</a>.
+<?php
+printf(esc_html__('Initial spatial support arrived in MySQL 5.4.2, and is in all versions of MariaDB. Until MySQL 5.6.1 and MariaDB 5.3.3 most spatial operators worked on the bounding box instead of on the actual geometry. For details on why this was a huge limitation, see %1$sthis blog post from Percona.com%2$s', 'wp_spatial_capabilities_check'), '<a href="https://www.percona.com/blog/2013/10/21/using-the-new-mysql-spatial-functions-5-6-for-geo-enabled-applications/" target="_blank">','</a>');
+?>
 </p>
-<h3>Resources</h3>
+	<h3><?php esc_html_e('Resources','wp_spatial_capabilities_check'); ?></h3>
 <p>
-As you add functionality to your WordPress install, the following resources may be useful to you: 
+<?php
+esc_html_e('As you add functionality to your WordPress install, the following resources may be useful to you:','wp_spatial_capabilities_check');
+?>
 </p>
 	<ul>
-		<li><a href='http://wherepress.com/'>WherePress.com - GIS for WordPress and MySQL</a></li>
-		<li><a href='https://mariadb.com/kb/en/mariadb/mysqlmariadb-spatial-support-matrix/' target='_blank'>MySQL and MariaDB Spatial Support Matrix</a></li>
-		<li><a href='https://docs.oracle.com/cd/E19957-01/mysql-refman-5.4/functions.html#spatial-extensions' target='_blank'>Spatial function reference for MySQL 5.4</a></li>
-		<li><a href='https://dev.mysql.com/doc/refman/5.5/en/spatial-function-reference.html' target='_blank'>Spatial function reference for MySQL 5.5</a></li>
-		<li><a href='https://dev.mysql.com/doc/refman/5.6/en/spatial-function-reference.html' target='_blank'>Spatial function reference for MySQL 5.6</a></li>
-		<li><a href='https://dev.mysql.com/doc/refman/5.7/en/spatial-function-reference.html' target='_blank'>Spatial function reference for MySQL 5.7</a></li>
-		<li><a href='https://mariadb.com/kb/en/mariadb/gis-functionality/' target='_blank'>Spatial function reference for MariaDB</a></li>
+	<li><a href='http://wherepress.com/'><?php esc_html_e('WherePress.com - GIS for WordPress and MySQL','wp_spatial_capabilities_check'); ?></a></li>
+	<li><a href='https://mariadb.com/kb/en/mariadb/mysqlmariadb-spatial-support-matrix/' target='_blank'><?php esc_html_e('MySQL and MariaDB Spatial Support Matrix','wp_spatial_capabilities_check'); ?></a></li>
+	<li><a href='https://docs.oracle.com/cd/E19957-01/mysql-refman-5.4/functions.html#spatial-extensions' target='_blank'><?php esc_html_e('Spatial function reference for MySQL 5.4','wp_spatial_capabilities_check'); ?></a></li>
+		<li><a href='https://dev.mysql.com/doc/refman/5.5/en/spatial-function-reference.html' target='_blank'><?php esc_html_e('Spatial function reference for MySQL 5.5', 'wp_spatial_capabilities_check'); ?></a></li>
+		<li><a href='https://dev.mysql.com/doc/refman/5.6/en/spatial-function-reference.html' target='_blank'><?php esc_html_e('Spatial function reference for MySQL 5.6', 'wp_spatial_capabilities_check'); ?></a></li>
+		<li><a href='https://dev.mysql.com/doc/refman/5.7/en/spatial-function-reference.html' target='_blank'><?php esc_html_e('Spatial function reference for MySQL 5.7', 'wp_spatial_capabilities_check'); ?></a></li>
+		<li><a href='https://mariadb.com/kb/en/mariadb/gis-functionality/' target='_blank'><?php esc_html_e('Spatial function reference for MariaDB', 'wp_spatial_capabilities_check'); ?></a></li>
 	</ul>
 </div>
 <div class="rightblock">
 <h3>Current Capabilities</h3>
 <p>
-Your database version is <strong><?php print $version_info->v;?></strong>.
+<?php
+printf( esc_html__('Your database version is %1$s.','wp_spatial_capabilities_check'), '<strong>' .  $version_info->v . '</strong>');
+?>
 </p>
 <p>
-The following table was created by querying your current MySQL connection.
+<?php
+esc_html_e('The following table was created by querying your current MySQL connection.','wp_spatial_capabilities_check');
+?>
 </p>
 <?php
 
 if( isset( $capabilites_table ) ) {
 	echo $capabilites_table;
 } else {
-	echo '<p>The capabilities table could not be generated.</p>';
+	echo '<p>' . esc_html__('The capabilities table could not be generated.','wp_spatial_capabilities_check') . '</p>';
 }
 ?>
 </div>
