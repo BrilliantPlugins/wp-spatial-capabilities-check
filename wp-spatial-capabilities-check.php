@@ -18,11 +18,11 @@
  *
  * Plugin Name: WP Spatial Capabilities Check
  * Description: Check what spatial functions your version of MySQL or MariaDB has available.
- * Plugin URI: https://github.com/cimburadotcom/wp_spatial_capabilities_check
+ * Plugin URI: https://github.com/cimburadotcom/wp-spatial-capabilities-check
  * Author: Michael Moore
  * Author URI: http://cimbura.com
  * Version: 0.0.1
- * Text Domain: wp_spatial_capabilities_check
+ * Text Domain: wp-spatial-capabilities-check
  * Domain Path: /lang
  * License: GPLv2
  *
@@ -35,7 +35,7 @@ add_action( 'admin_menu', 'wpscc_admin_menu' );
  * Add the management page menu listing.
  */
 function wpscc_admin_menu() {
-	add_management_page( esc_html__( 'Spatial Capabilites', 'wp_spatial_capabilities_check' ), esc_html__( 'Spatial Capabilites','wp_spatial_capabilities_check' ), 'install_plugins', 'spatial-capabilites', 'wpscc_show_spatial_capabilites' );
+	add_management_page( esc_html__( 'Spatial Capabilites', 'wp-spatial-capabilities-check' ), esc_html__( 'Spatial Capabilites','wp-spatial-capabilities-check' ), 'install_plugins', 'spatial-capabilites', 'wpscc_show_spatial_capabilites' );
 }
 
 /**
@@ -210,7 +210,7 @@ function wpscc_show_spatial_capabilites() {
 	$suppress = $wpdb->suppress_errors( true );
 	$errors = $wpdb->show_errors( false );
 
-	$capabilites_table = '<table class="spatialcapabilites"><tr><th>' . esc_html__( 'Function Name','wp_spatial_capabilities_check' ) . '</th><th>' . esc_html__( 'Function Exists?','wp_spatial_capabilities_check' ) . '</th></tr>';
+	$capabilites_table = '<table class="spatialcapabilites"><tr><th>' . esc_html__( 'Function Name','wp-spatial-capabilities-check' ) . '</th><th>' . esc_html__( 'Function Exists?','wp-spatial-capabilities-check' ) . '</th></tr>';
 
 	foreach ( $all_funcs as $func ) {
 		$q = "SELECT $func() AS worked";
@@ -218,9 +218,9 @@ function wpscc_show_spatial_capabilites() {
 
 		$capabilites_table .= '<tr><th>' . $func . '</th>';
 		if ( strpos( $wpdb->last_error,'Incorrect parameter count' ) !== false || strpos( $wpdb->last_error,'You have an error in your SQL syntax' ) !== false ) {
-			$capabilites_table .= '<td class="hassupport">' . esc_html__( 'Yes','wp_spatial_capabilities_check' ) . '</td>';
+			$capabilites_table .= '<td class="hassupport">' . esc_html__( 'Yes','wp-spatial-capabilities-check' ) . '</td>';
 		} else {
-			$capabilites_table .= '<td class="lackssupport">' . esc_html__( 'No','wp_spatial_capabilities_check' ) . '</td>';
+			$capabilites_table .= '<td class="lackssupport">' . esc_html__( 'No','wp-spatial-capabilities-check' ) . '</td>';
 		}
 		$capabilites_table .= '</tr>';
 	}
@@ -248,7 +248,7 @@ add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'wpscc_add_plu
 function wpscc_add_plugin_action_links( $links ) {
 	return array_merge(
 		array(
-			'checknow' => '<a href="' . get_bloginfo( 'wpurl' ) . '/wp-admin/tools.php?page=spatial-capabilites">' . esc_html__( 'Check Now','wp_spatial_capabilities_check' ) . '</a>',
+			'checknow' => '<a href="' . get_bloginfo( 'wpurl' ) . '/wp-admin/tools.php?page=spatial-capabilites">' . esc_html__( 'Check Now','wp-spatial-capabilities-check' ) . '</a>',
 		),
 		$links
 	);
@@ -260,5 +260,5 @@ add_action( 'plugins_loaded', 'wpscc_load_textdomain' );
  * Set up the I18N path.
  */
 function wpscc_load_textdomain() {
-	load_plugin_textdomain( 'wp_spatial_capabilities_check', false, dirname( plugin_basename( __FILE__ ) ) . '/lang/' );
+	load_plugin_textdomain( 'wp-spatial-capabilities-check', false, dirname( plugin_basename( __FILE__ ) ) . '/lang/' );
 }

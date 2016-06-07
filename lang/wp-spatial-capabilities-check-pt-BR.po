@@ -1,10 +1,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/"
-"wp_spatial_capabilities_check\n"
-"POT-Creation-Date: 2016-06-07 16:57-0500\n"
-"PO-Revision-Date: 2016-06-07 16:57-0500\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-spatial-"
+"capabilities-check\n"
+"POT-Creation-Date: 2016-06-07 17:18-0500\n"
+"PO-Revision-Date: 2016-06-07 17:18-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -16,11 +16,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. Plugin Name of the plugin/theme
-#: spatial_layout.php:51
+#: spatial-layout.php:59
 msgid "WP Spatial Capabilities Check"
 msgstr "WP Verifica Capacidades Espaciais"
 
-#: spatial_layout.php:55
+#: spatial-layout.php:63
 msgid ""
 "WordPress runs on MySQL and MariaDB so it makes sense that the spatial "
 "capabilites available depend on what the underlying database provides."
@@ -29,7 +29,7 @@ msgstr ""
 "capacidades espaciais disponíveis dependem no quais capacidades o Banco de "
 "Dados oferece."
 
-#: spatial_layout.php:59
+#: spatial-layout.php:67
 msgid ""
 "Initial spatial support arrived in MySQL 5.4.2, and is in all versions of "
 "MariaDB. Until MySQL 5.6.1 and MariaDB 5.3.3 most spatial operators worked "
@@ -42,11 +42,11 @@ msgstr ""
 "porque este foi um limitação enorme, veja %1$seste post no blog de Percona."
 "com%2$s."
 
-#: spatial_layout.php:62
+#: spatial-layout.php:70
 msgid "Resources"
 msgstr "Recursos"
 
-#: spatial_layout.php:65
+#: spatial-layout.php:73
 msgid ""
 "As you add functionality to your WordPress install, the following resources "
 "may be useful to you:"
@@ -54,75 +54,75 @@ msgstr ""
 "Em quanto você addiçiona funcionalidade no seu install de WordPRess, os "
 "seguintes recursos podem ser úties:"
 
-#: spatial_layout.php:69
+#: spatial-layout.php:77
 msgid "WherePress.com - GIS for WordPress and MySQL"
 msgstr "WherePress.com - SIG para WordPRess e MySQL"
 
-#: spatial_layout.php:70
+#: spatial-layout.php:78
 msgid "MySQL and MariaDB Spatial Support Matrix"
 msgstr "Matriz de apoio espacial de MySQL e MariaDB"
 
-#: spatial_layout.php:71
+#: spatial-layout.php:79
 msgid "Spatial function reference for MySQL 5.4"
 msgstr "Referência de funções espacias para MySQL 5.4"
 
-#: spatial_layout.php:72
+#: spatial-layout.php:80
 msgid "Spatial function reference for MySQL 5.5"
 msgstr "Referência de funções espacias para MySQL 5.5"
 
-#: spatial_layout.php:73
+#: spatial-layout.php:81
 msgid "Spatial function reference for MySQL 5.6"
 msgstr "Referência de funções espacias para MySQL 5.6"
 
-#: spatial_layout.php:74
+#: spatial-layout.php:82
 msgid "Spatial function reference for MySQL 5.7"
 msgstr "Referência de funções espacias para MySQL 5.7"
 
-#: spatial_layout.php:75
+#: spatial-layout.php:83
 msgid "Spatial function reference for MariaDB"
 msgstr "Referência de funções espacias para MariaDB"
 
-#: spatial_layout.php:82
+#: spatial-layout.php:90
 msgid "Your database version is %1$s."
 msgstr "Seu versão de banco de dados é %1$s."
 
-#: spatial_layout.php:87
+#: spatial-layout.php:95
 msgid ""
 "The following table was created by querying your current database connection."
 msgstr ""
 "A tabela a seguir foi gerado por meio de consultas á connexão de banco de "
 "dados atual."
 
-#: spatial_layout.php:95
+#: spatial-layout.php:103
 msgid "The capabilities table could not be generated."
 msgstr "A tabela de capabilidades não podia ser gerado."
 
-#: wp_spatial_capabilities_check.php:37
+#: wp-spatial-capabilities-check.php:38
 msgid "Spatial Capabilites"
 msgstr "Capacidades Espacias"
 
-#: wp_spatial_capabilities_check.php:210
+#: wp-spatial-capabilities-check.php:213
 msgid "Function Name"
 msgstr "Nome do Função"
 
-#: wp_spatial_capabilities_check.php:210
+#: wp-spatial-capabilities-check.php:213
 msgid "Function Exists?"
 msgstr "Função Existe?"
 
-#: wp_spatial_capabilities_check.php:218
+#: wp-spatial-capabilities-check.php:221
 msgid "Yes"
 msgstr "Sim"
 
-#: wp_spatial_capabilities_check.php:220
+#: wp-spatial-capabilities-check.php:223
 msgid "No"
 msgstr "Não"
 
-#: wp_spatial_capabilities_check.php:242
+#: wp-spatial-capabilities-check.php:251
 msgid "Check Now"
 msgstr "Verifica Agora"
 
 #. Plugin URI of the plugin/theme
-msgid "https://github.com/cimburadotcom/wp_spatial_capabilities_check"
+msgid "https://github.com/cimburadotcom/wp-spatial-capabilities-check"
 msgstr ""
 
 #. Description of the plugin/theme
