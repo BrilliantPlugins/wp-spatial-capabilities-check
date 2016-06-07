@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/"
 "wp_spatial_capabilities_check\n"
-"POT-Creation-Date: 2016-06-07 16:49-0500\n"
-"PO-Revision-Date: 2016-06-07 16:54-0500\n"
+"POT-Creation-Date: 2016-06-07 16:57-0500\n"
+"PO-Revision-Date: 2016-06-07 16:57-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -14,6 +14,11 @@ msgstr ""
 "X-Generator: Poedit 1.8.8\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. Plugin Name of the plugin/theme
+#: spatial_layout.php:51
+msgid "WP Spatial Capabilities Check"
+msgstr "WP Verifica Capacidades Espaciais"
 
 #: spatial_layout.php:55
 msgid ""
@@ -116,10 +121,6 @@ msgstr "Não"
 msgid "Check Now"
 msgstr "Verifica Agora"
 
-#. Plugin Name of the plugin/theme
-msgid "WP Spatial Capabilites Check"
-msgstr "WP Verifica Capacidades Espaciais"
-
 #. Plugin URI of the plugin/theme
 msgid "https://github.com/cimburadotcom/wp_spatial_capabilities_check"
 msgstr ""
@@ -138,6 +139,9 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "http://cimbura.com"
 msgstr ""
+
+#~ msgid "WP Spatial Capabilites Check"
+#~ msgstr "WP Verifica Capacidades Espaciais"
 
 #~ msgid ""
 #~ "Initial spatial support arrived in MySQL 5.4.2, and is in all versions of "

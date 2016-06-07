@@ -20,7 +20,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 /**
  *
- * Plugin Name: WP Spatial Capabilites Check
+ * Plugin Name: WP Spatial Capabilities Check
  * Description: Check what spatial functions your version of MySQL or MariaDB has available. 
  * Plugin URI: https://github.com/cimburadotcom/wp_spatial_capabilities_check
  * Author: Michael Moore
@@ -34,7 +34,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 add_action( 'admin_menu', 'wpscc_admin_menu' );
 
 function wpscc_admin_menu() {
-	add_management_page( esc_html__('Spatial Capabilites'), esc_html__('Spatial Capabilites'), 'install_plugins', 'spatial-capabilites', 'wpscc_show_spatial_capabilites' );
+	add_management_page( esc_html__('Spatial Capabilites', 'wp_spatial_capabilities_check'), esc_html__('Spatial Capabilites','wp_spatial_capabilities_check'), 'install_plugins', 'spatial-capabilites', 'wpscc_show_spatial_capabilites' );
 }
 
 function wpscc_show_spatial_capabilites() {

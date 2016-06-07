@@ -1,11 +1,11 @@
-# Copyright (C) 2016 WP Spatial Capabilites Check
-# This file is distributed under the same license as the WP Spatial Capabilites Check package.
+# Copyright (C) 2016 WP Spatial Capabilities Check
+# This file is distributed under the same license as the WP Spatial Capabilities Check package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WP Spatial Capabilites Check 0.0.1\n"
+"Project-Id-Version: WP Spatial Capabilities Check 0.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/"
 "wp_spatial_capabilities_check\n"
-"POT-Creation-Date: 2016-06-07 21:54:52+00:00\n"
+"POT-Creation-Date: 2016-06-07 21:58:30+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,6 +13,8 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
+#. #-#-#-#-#  messages.pot (WP Spatial Capabilities Check 0.0.1)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
 #: spatial_layout.php:51
 msgid "WP Spatial Capabilities Check"
 msgstr ""
@@ -104,10 +106,6 @@ msgstr ""
 
 #: wp_spatial_capabilities_check.php:242
 msgid "Check Now"
-msgstr ""
-
-#. Plugin Name of the plugin/theme
-msgid "WP Spatial Capabilites Check"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
