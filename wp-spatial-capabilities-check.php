@@ -21,7 +21,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 /**
  *
  * Plugin Name: WP Spatial Capabilities Check
- * Description: Check what spatial functions your version of MySQL or MariaDB has available. 
+ * Description: Check what spatial functions your version of MySQL or MariaDB has available.
  * Plugin URI: https://github.com/cimburadotcom/wp_spatial_capabilities_check
  * Author: Michael Moore
  * Author URI: http://cimbura.com
@@ -34,7 +34,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 add_action( 'admin_menu', 'wpscc_admin_menu' );
 
 function wpscc_admin_menu() {
-	add_management_page( esc_html__('Spatial Capabilites', 'wp_spatial_capabilities_check'), esc_html__('Spatial Capabilites','wp_spatial_capabilities_check'), 'install_plugins', 'spatial-capabilites', 'wpscc_show_spatial_capabilites' );
+	add_management_page( esc_html__( 'Spatial Capabilites', 'wp_spatial_capabilities_check' ), esc_html__( 'Spatial Capabilites','wp_spatial_capabilities_check' ), 'install_plugins', 'spatial-capabilites', 'wpscc_show_spatial_capabilites' );
 }
 
 function wpscc_show_spatial_capabilites() {
@@ -202,12 +202,11 @@ function wpscc_show_spatial_capabilites() {
 	);
 
 	// Generate a table of capabilities
-
 	// Suppress errors during this test
 	$suppress = $wpdb->suppress_errors( true );
 	$errors = $wpdb->show_errors( false );
 
-	$capabilites_table = '<table class="spatialcapabilites"><tr><th>' . esc_html__('Function Name','wp_spatial_capabilities_check') . '</th><th>' . esc_html__('Function Exists?','wp_spatial_capabilities_check') . '</th></tr>';
+	$capabilites_table = '<table class="spatialcapabilites"><tr><th>' . esc_html__( 'Function Name','wp_spatial_capabilities_check' ) . '</th><th>' . esc_html__( 'Function Exists?','wp_spatial_capabilities_check' ) . '</th></tr>';
 
 	foreach ( $all_funcs as $func ) {
 		$q = "SELECT $func() AS worked";
@@ -215,9 +214,9 @@ function wpscc_show_spatial_capabilites() {
 
 		$capabilites_table .= '<tr><th>' . $func . '</th>';
 		if ( strpos( $wpdb->last_error,'Incorrect parameter count' ) !== false || strpos( $wpdb->last_error,'You have an error in your SQL syntax' ) !== false ) {
-			$capabilites_table .= '<td class="hassupport">' . esc_html__('Yes','wp_spatial_capabilities_check') . '</td>';
+			$capabilites_table .= '<td class="hassupport">' . esc_html__( 'Yes','wp_spatial_capabilities_check' ) . '</td>';
 		} else {
-			$capabilites_table .= '<td class="lackssupport">' . esc_html__('No','wp_spatial_capabilities_check') . '</td>';
+			$capabilites_table .= '<td class="lackssupport">' . esc_html__( 'No','wp_spatial_capabilities_check' ) . '</td>';
 		}
 		$capabilites_table .= '</tr>';
 	}
@@ -229,23 +228,22 @@ function wpscc_show_spatial_capabilites() {
 	$wpdb->show_errors( $errors );
 
 	// Generate a table of MySQL information
+	$version_info = $wpdb->get_row( 'SELECT VERSION() as v' );
 
-	$version_info = $wpdb->get_row("SELECT VERSION() as v");
-
-	include( dirname( __FILE__ ) . '/spatial_layout.php' );
+	include( dirname( __FILE__ ) . '/spatial-layout.php' );
 }
 
 add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'wpscc_add_plugin_action_links' );
 function wpscc_add_plugin_action_links( $links ) {
 	return array_merge(
 		array(
-			'checknow' => '<a href="' . get_bloginfo( 'wpurl' ) . '/wp-admin/tools.php?page=spatial-capabilites">' . esc_html__('Check Now','wp_spatial_capabilities_check') . '</a>',
+			'checknow' => '<a href="' . get_bloginfo( 'wpurl' ) . '/wp-admin/tools.php?page=spatial-capabilites">' . esc_html__( 'Check Now','wp_spatial_capabilities_check' ) . '</a>',
 		),
 		$links
 	);
 }
 
-add_action('plugins_loaded', 'wpscc_load_textdomain');
+add_action( 'plugins_loaded', 'wpscc_load_textdomain' );
 function wpscc_load_textdomain() {
-	load_plugin_textdomain( 'wp_spatial_capabilities_check', false, dirname( plugin_basename(__FILE__) ) . '/lang/' );
+	load_plugin_textdomain( 'wp_spatial_capabilities_check', false, dirname( plugin_basename( __FILE__ ) ) . '/lang/' );
 }
