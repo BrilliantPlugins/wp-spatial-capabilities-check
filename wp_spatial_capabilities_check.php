@@ -27,13 +27,14 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  * Author URI: http://cimbura.com
  * Version: 0.0.1
  * Text Domain: wp_spatial_capabilities_check
+ * Domain Path: /lang
  * License: GPLv2
  */
 
 add_action( 'admin_menu', 'wpscc_admin_menu' );
 
 function wpscc_admin_menu() {
-	add_management_page( 'Spatial Capabilites', 'Spatial Capabilites', 'install_plugins', 'spatial-capabilites', 'wpscc_show_spatial_capabilites' );
+	add_management_page( esc_html__('Spatial Capabilites'), esc_html__('Spatial Capabilites'), 'install_plugins', 'spatial-capabilites', 'wpscc_show_spatial_capabilites' );
 }
 
 function wpscc_show_spatial_capabilites() {
@@ -231,7 +232,7 @@ function wpscc_show_spatial_capabilites() {
 
 	$version_info = $wpdb->get_row("SELECT VERSION() as v");
 
-	include( dirname( __FILE__ ) . '/spatial_layout.inc' );
+	include( dirname( __FILE__ ) . '/spatial_layout.php' );
 }
 
 add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'wpscc_add_plugin_action_links' );

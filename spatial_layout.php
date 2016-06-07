@@ -48,7 +48,7 @@
 }
 
 </style>
-<h1>WP Spatial Capabilities Check</h1>
+	<h1><?php esc_html_e('WP Spatial Capabilities Check','wp_spatial_capabilities_check'); ?></h1>
 <div class="spatialcapabilites">
 <div class="leftblock">
 <p>
