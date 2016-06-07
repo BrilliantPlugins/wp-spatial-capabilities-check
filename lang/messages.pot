@@ -1,0 +1,105 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Michael Moore
+# This file is distributed under the same license as the wp_spatial_capabilities_check package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wp_spatial_capabilities_check 0.0.1\n"
+"Report-Msgid-Bugs-To: michael_m@cimbura.com\n"
+"POT-Creation-Date: 2016-06-07 16:27-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: spatial_layout.inc:55
+msgid ""
+"WordPress runs on MySQL and MariaDB so it makes sense that the spatial "
+"capabilites available depend on what the underlying database provides."
+msgstr ""
+
+#: spatial_layout.inc:59
+#, php-format
+msgid ""
+"Initial spatial support arrived in MySQL 5.4.2, and is in all versions of "
+"MariaDB. Until MySQL 5.6.1 and MariaDB 5.3.3 most spatial operators worked "
+"on the bounding box instead of on the actual geometry. For details on why "
+"this was a huge limitation, see %1$sthis blog post from Percona.com%2$s."
+msgstr ""
+
+#: spatial_layout.inc:62
+msgid "Resources"
+msgstr ""
+
+#: spatial_layout.inc:65
+msgid ""
+"As you add functionality to your WordPress install, the following resources "
+"may be useful to you:"
+msgstr ""
+
+#: spatial_layout.inc:69
+msgid "WherePress.com - GIS for WordPress and MySQL"
+msgstr ""
+
+#: spatial_layout.inc:70
+msgid "MySQL and MariaDB Spatial Support Matrix"
+msgstr ""
+
+#: spatial_layout.inc:71
+msgid "Spatial function reference for MySQL 5.4"
+msgstr ""
+
+#: spatial_layout.inc:72
+msgid "Spatial function reference for MySQL 5.5"
+msgstr ""
+
+#: spatial_layout.inc:73
+msgid "Spatial function reference for MySQL 5.6"
+msgstr ""
+
+#: spatial_layout.inc:74
+msgid "Spatial function reference for MySQL 5.7"
+msgstr ""
+
+#: spatial_layout.inc:75
+msgid "Spatial function reference for MariaDB"
+msgstr ""
+
+#: spatial_layout.inc:82
+#, php-format
+msgid "Your database version is %1$s."
+msgstr ""
+
+#: spatial_layout.inc:87
+msgid ""
+"The following table was created by querying your current database connection."
+msgstr ""
+
+#: spatial_layout.inc:95
+msgid "The capabilities table could not be generated."
+msgstr ""
+
+#: wp_spatial_capabilities_check.php:209
+msgid "Function Exists?"
+msgstr ""
+
+#: wp_spatial_capabilities_check.php:209
+msgid "Function Name"
+msgstr ""
+
+#: wp_spatial_capabilities_check.php:217
+msgid "Yes"
+msgstr ""
+
+#: wp_spatial_capabilities_check.php:219
+msgid "No"
+msgstr ""
+
+#: wp_spatial_capabilities_check.php:241
+msgid "Check Now"
+msgstr ""

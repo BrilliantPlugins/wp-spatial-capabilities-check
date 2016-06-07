@@ -243,3 +243,8 @@ function wpscc_add_plugin_action_links( $links ) {
 		$links
 	);
 }
+
+add_action('plugins_loaded', 'wpscc_load_textdomain');
+function wpscc_load_textdomain() {
+	load_plugin_textdomain( 'wp_spatial_capabilities_check', false, dirname( plugin_basename(__FILE__) ) . '/lang/' );
+}

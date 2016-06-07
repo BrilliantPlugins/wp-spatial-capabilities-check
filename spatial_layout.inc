@@ -56,7 +56,7 @@
 </p>
 <p>
 <?php
-printf(esc_html__('Initial spatial support arrived in MySQL 5.4.2, and is in all versions of MariaDB. Until MySQL 5.6.1 and MariaDB 5.3.3 most spatial operators worked on the bounding box instead of on the actual geometry. For details on why this was a huge limitation, see %1$sthis blog post from Percona.com%2$s', 'wp_spatial_capabilities_check'), '<a href="https://www.percona.com/blog/2013/10/21/using-the-new-mysql-spatial-functions-5-6-for-geo-enabled-applications/" target="_blank">','</a>');
+printf(esc_html__('Initial spatial support arrived in MySQL 5.4.2, and is in all versions of MariaDB. Until MySQL 5.6.1 and MariaDB 5.3.3 most spatial operators worked on the bounding box instead of on the actual geometry. For details on why this was a huge limitation, see %1$sthis blog post from Percona.com%2$s.', 'wp_spatial_capabilities_check'), '<a href="https://www.percona.com/blog/2013/10/21/using-the-new-mysql-spatial-functions-5-6-for-geo-enabled-applications/" target="_blank">','</a>');
 ?>
 </p>
 	<h3><?php esc_html_e('Resources','wp_spatial_capabilities_check'); ?></h3>
@@ -84,7 +84,7 @@ printf( esc_html__('Your database version is %1$s.','wp_spatial_capabilities_che
 </p>
 <p>
 <?php
-esc_html_e('The following table was created by querying your current MySQL connection.','wp_spatial_capabilities_check');
+esc_html_e('The following table was created by querying your current database connection.','wp_spatial_capabilities_check');
 ?>
 </p>
 <?php

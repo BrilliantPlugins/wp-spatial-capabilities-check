@@ -1,0 +1,131 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: michael_m@cimbura.com\n"
+"POT-Creation-Date: 2016-06-07 16:27-0500\n"
+"PO-Revision-Date: 2016-06-07 16:35-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.8\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: spatial_layout.inc:55
+msgid ""
+"WordPress runs on MySQL and MariaDB so it makes sense that the spatial "
+"capabilites available depend on what the underlying database provides."
+msgstr ""
+"WordPress é executido em MySQL e MariaDB portanto faz sentido que as "
+"capabilidades espacias disponíveis dependem no quais capabilidades o Banco "
+"de Dados oferece."
+
+#: spatial_layout.inc:59
+#, php-format
+msgid ""
+"Initial spatial support arrived in MySQL 5.4.2, and is in all versions of "
+"MariaDB. Until MySQL 5.6.1 and MariaDB 5.3.3 most spatial operators worked "
+"on the bounding box instead of on the actual geometry. For details on why "
+"this was a huge limitation, see %1$sthis blog post from Percona.com%2$s."
+msgstr ""
+"Apoio espatial chegou em MySQL 5.4.2, e esta em todos os versões de MariaDB. "
+"Porem, até MySQL 5.6.1 e MariaDB 5.3.3 a maioria dos operaçoes espacias "
+"funcionavam com o bounding box em vez do proprio geometria. Para detalhes de "
+"porque este foi um limitação enorme, veja %1$seste post no blog de Percona."
+"com%2$s."
+
+#: spatial_layout.inc:62
+msgid "Resources"
+msgstr "Recursos"
+
+#: spatial_layout.inc:65
+msgid ""
+"As you add functionality to your WordPress install, the following resources "
+"may be useful to you:"
+msgstr ""
+"Em quanto você addiçiona funcionalidade no seu install de WordPRess, os "
+"seguintes recursos podem ser úties:"
+
+#: spatial_layout.inc:69
+msgid "WherePress.com - GIS for WordPress and MySQL"
+msgstr "WherePress.com - SIG para WordPRess e MySQL"
+
+#: spatial_layout.inc:70
+msgid "MySQL and MariaDB Spatial Support Matrix"
+msgstr "Matriz de apoio espacial de MySQL e MariaDB"
+
+#: spatial_layout.inc:71
+msgid "Spatial function reference for MySQL 5.4"
+msgstr "Referência de funções espacias para MySQL 5.4"
+
+#: spatial_layout.inc:72
+msgid "Spatial function reference for MySQL 5.5"
+msgstr "Referência de funções espacias para MySQL 5.5"
+
+#: spatial_layout.inc:73
+msgid "Spatial function reference for MySQL 5.6"
+msgstr "Referência de funções espacias para MySQL 5.6"
+
+#: spatial_layout.inc:74
+msgid "Spatial function reference for MySQL 5.7"
+msgstr "Referência de funções espacias para MySQL 5.7"
+
+#: spatial_layout.inc:75
+msgid "Spatial function reference for MariaDB"
+msgstr "Referência de funções espacias para MariaDB"
+
+#: spatial_layout.inc:82
+#, php-format
+msgid "Your database version is %1$s."
+msgstr "Seu versão de banco de dados é %1$s."
+
+#: spatial_layout.inc:87
+msgid ""
+"The following table was created by querying your current database connection."
+msgstr ""
+"A tabela a seguir foi gerado por meio de consultas á connexão de banco de "
+"dados atual."
+
+#: spatial_layout.inc:95
+msgid "The capabilities table could not be generated."
+msgstr "A tabela de capabilidades não podia ser gerado."
+
+#: wp_spatial_capabilities_check.php:209
+msgid "Function Exists?"
+msgstr "Função Existe?"
+
+#: wp_spatial_capabilities_check.php:209
+msgid "Function Name"
+msgstr "Nome do Função"
+
+#: wp_spatial_capabilities_check.php:217
+msgid "Yes"
+msgstr "Sim"
+
+#: wp_spatial_capabilities_check.php:219
+msgid "No"
+msgstr "Não"
+
+#: wp_spatial_capabilities_check.php:241
+msgid "Check Now"
+msgstr "Verifica Agora"
+
+#~ msgid ""
+#~ "Initial spatial support arrived in MySQL 5.4.2, and is in all versions of "
+#~ "MariaDB. Until MySQL 5.6.1 and MariaDB 5.3.3 most spatial operators "
+#~ "worked on the bounding box instead of on the actual geometry. For details "
+#~ "on why this was a huge limitation, see %1$sthis blog post from Percona.com"
+#~ "%2$s"
+#~ msgstr ""
+#~ "Apoio espatial chegou em MySQL 5.4.2, e esta em todos os versões de "
+#~ "MariaDB. Porem, até MySQL 5.6.1 e MariaDB 5.3.3 a maioria dos operaçoes "
+#~ "espacias funcionavam com o bounding box em vez do proprio geometria. Para "
+#~ "detalhes de porque este foi um limitação enorme, veja %1$seste post no "
+#~ "blog de Percona.com%2$s."
+
+#~ msgid ""
+#~ "The following table was created by querying your current MySQL connection."
+#~ msgstr "A tabela a seguir foi gerado por meio de "
