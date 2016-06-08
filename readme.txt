@@ -78,3 +78,5 @@ functions and if they're available with your current database.
 == Upgrade Notice ==
 
 = 0.0.3 =
+* You probably don't have a version installed yet, so you should definately
+check out 0.0.3.
