@@ -21,7 +21,7 @@
  * Plugin URI: https://github.com/cimburadotcom/wp-spatial-capabilities-check
  * Author: Michael Moore
  * Author URI: http://cimbura.com
- * Version: 0.0.1
+ * Version: 0.0.2
  * Text Domain: wp-spatial-capabilities-check
  * Domain Path: /lang
  * License: GPLv2

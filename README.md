@@ -34,3 +34,14 @@ For more information on how to use these functions see the following resources:
 * [Spatial function reference for MySQL 5.6](https://dev.mysql.com/doc/refman/5.6/en/spatial-function-reference.html)
 * [Spatial function reference for MySQL 5.7](https://dev.mysql.com/doc/refman/5.7/en/spatial-function-reference.html)
 * [Spatial function reference for MariaDB](https://mariadb.com/kb/en/mariadb/gis-functionality/)
+
+## Version History
+
+###  0.0.2
+
+ * Internationalization
+ * WordPress coding standards compliance
+
+### 0.0.1
+
+ * Initial development and testing
