@@ -1,9 +1,9 @@
 === WP Spatial Capabilities Check ===
-Contributors: stuporglue
+Contributors: stuporglue, luminfire
 Donate link: https://cimbura.com/contact-us/make-a-payment/
 Tags: GIS, spatial, mysql, mariadb, geography, mapping
 Requires at least: 3.0.1
-Tested up to: 4.5.2
+Tested up to: 4.7.2
 Stable tag: trunk
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -64,6 +64,10 @@ functions and if they're available with your current database.
 2. The tool can be found in the Dashboard under Tools::Spatial Capabilities.
 
 == Changelog ==
+
+= 0.0.4 =
+* Now uses WP-GeoMeta-Lib so that custom defined functions from other plugins
+get detected.
 
 = 0.0.3 = 
 * Use the WordPress plugin packaging standards

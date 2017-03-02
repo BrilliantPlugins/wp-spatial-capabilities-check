@@ -1,5 +1,7 @@
 # WP Spatial Capabilities Check
 
+![See what spatial functions your MySQL or MariaDB data supports](assets/banner-1544x500.png)
+
 Find out what spatial functions your WordPress database supports.
 
 MySQL and MariaDB both have improved their spatial support in the last few years, but 
