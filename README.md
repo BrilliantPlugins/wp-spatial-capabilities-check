@@ -39,11 +39,17 @@ For more information on how to use these functions see the following resources:
 
 ## Version History
 
-###  0.0.2
 
+### 0.0.4
+* Now uses WP-GeoMeta-Lib so that custom defined functions from other plugins
+get detected.
+
+### 0.0.3
+* Use the WordPress plugin packaging standards
+
+###  0.0.2
  * Internationalization
  * WordPress coding standards compliance
 
 ### 0.0.1
-
  * Initial development and testing

@@ -28,7 +28,14 @@ function wpscc_admin_menu() {
 function wpscc_show_spatial_capabilites() {
 	global $wpdb;
 
-	require_once( dirname( __FILE__ ) . '/wp-geometa-lib/wp-geometa-lib-loader.php' );
+	$wpgm_loader = dirname( __FILE__ ) . '/wp-geometa-lib/wp-geometa-lib-loader.php';
+	if ( file_exists( $wpgm_loader ) ){
+		require_once( $wpgm_loader );
+	} else {
+		error_log( __( "Could not load wp-geometa-lib. You probably cloned wp-spatial-capabilities-check from git and didn't check out submodules!", 'wp-spatial-capabilities-check' ) );
+		print esc_html__( "Could not load wp-geometa-lib. You probably cloned wp-spatial-capabilities-check from git and didn't check out submodules!", 'wp-spatial-capabilities-check' );
+		return;
+	}
 
 	$capabilites_table = '<table class="spatialcapabilites"><tr><th>' . esc_html__( 'Function Name','wp-spatial-capabilities-check' ) . '</th><th>' . esc_html__( 'Function Exists?','wp-spatial-capabilities-check' ) . '</th></tr>';
 
