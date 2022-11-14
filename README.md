@@ -1,6 +1,6 @@
 # WP Spatial Capabilities Check
 
-![See what spatial functions your MySQL or MariaDB data supports](assets/banner-1544x500.png)
+![See which spatial functions your MySQL or MariaDB data supports](assets/banner-1544x500.png)
 
 Find out what spatial functions your WordPress database supports.
 
@@ -29,7 +29,6 @@ The tool can be found in the Dashboard under Tools::Spatial Capabilities.
 
 For more information on how to use these functions see the following resources:
 
-* [WherePress.com - GIS for WordPress and MySQL](http://wherepress.com/)
 * [MySQL and MariaDB Spatial Support Matrix](https://mariadb.com/kb/en/mariadb/mysqlmariadb-spatial-support-matrix/)
 * [Spatial function reference for MySQL 5.4](https://docs.oracle.com/cd/E19957-01/mysql-refman-5.4/functions.html#spatial-extensions)
 * [Spatial function reference for MySQL 5.5](https://dev.mysql.com/doc/refman/5.5/en/spatial-function-reference.html)
@@ -38,7 +37,6 @@ For more information on how to use these functions see the following resources:
 * [Spatial function reference for MariaDB](https://mariadb.com/kb/en/mariadb/gis-functionality/)
 
 ## Version History
-
 
 ### 0.0.4
 * Now uses WP-GeoMeta-Lib so that custom defined functions from other plugins
